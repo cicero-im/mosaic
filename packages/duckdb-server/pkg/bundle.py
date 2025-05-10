@@ -73,4 +73,4 @@ def load_bundle(con, cache, directory):
     # Load precomputed tables into the database
     for table in manifest["tables"]:
         file = directory / f"{table}.parquet"
-        con.execute(f"CREATE TABLE IF NOT EXISTS {table} AS SELECT * FROM '{file}'")
+        con.execute(f"CREATE TABLE IF NOT EXISTS {table} AS SELECT * FROM ?", (file, ))
