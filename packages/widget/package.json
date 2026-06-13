@@ -26,6 +26,6 @@
   },
   "devDependencies": {
     "anywidget": "0.9.18",
-    "esbuild": "^0.25.4"
+    "esbuild": "^0.28.1"
   }
 }
